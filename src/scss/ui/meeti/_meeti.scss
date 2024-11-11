@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.meeti{
+    &__heading{
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    &__grid{
+        @include m.grid(1, 2rem);
+        @include m.tablet {  
+            display: flex;
+        }
+    }
+
+    &__direccion{
+        margin-top: 0;
+        padding: 2rem;
+        background-color: v.$secundario;
+    }
+
+    &__title{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    &__fecha{
+        text-align: center;
+        color: v.$blanco;
+
+        span{
+            font-weight: 700;
+        }
+    }
+
+    &__hora{
+        text-align: center;
+        color: v.$blanco;
+
+        span{
+            font-weight: 700;
+        }
+        
+    }
+
+    &__info{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+}
+
+.meetis{
+    margin-top: 2rem;
+    &__texto {
+        text-align: left;
+        margin-bottom: 3rem;
+
+        &:last-of-type{
+            margin-bottom: 8rem;
+        }
+    }
+}
